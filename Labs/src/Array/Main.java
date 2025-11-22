@@ -49,6 +49,7 @@ public class Main {
 //      a.traversing(try3);
         System.out.println("The index of value 7 in array try3 is [By LinearSearch]: "+Array.LinearSearchStatic(try3, 5));
         System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 5));
+        System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 100));
       
     }
 }
