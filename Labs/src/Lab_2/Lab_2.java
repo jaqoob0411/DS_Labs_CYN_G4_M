@@ -4,10 +4,6 @@
  */
 package Lab_2;
 
-/**
- *
- * @author T.Y
- */
 public class Lab_2 {
     public static void main(String[] args) {
         
