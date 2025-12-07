@@ -3,6 +3,7 @@ package Array;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 //        Scanner in = new Scanner(System.in);
         Array a = new Array();
@@ -26,16 +27,18 @@ public class Main {
 //        System.out.println("the index is : "+x);
 //        in.close();;
 //    int []try1 =new int[5];
-      int []try1 = {1,5,9,7,14};
-      int []try2 = {4,3,885,90};
-      
+        Integer[] try1 = {10, 5, 9, 7, 14};
+        Integer[] try2 = {5, 8, 885, 55, 1, 7};
+        int[] try3 = {10, 5, 9, 7, 14};
+        int[] try4 = {5, 8, 885, 55, 7, 1};
+
 //    a.insert(try1,5);
 //    a.insert_3(try1, 0);st
 //        a.deleteByIndex(try1, 1);
 //        System.out.println(5>4);
 //        System.out.println(5>5);
-       // a.deleteByValue(try1, 2);
-       //a.traversing(try1);
+        // a.deleteByValue(try1, 2);
+        //a.traversing(try1);
 //       a.traversing(try1);
 //       Array.sort(try1);
 //        System.out.println();
@@ -44,12 +47,46 @@ public class Main {
 //        a.traversing(try1);
 //        System.out.println("The Second Array : ");
 //        a.traversing(try2);
-    int [] try3=  a.merging(try1, try2);
+//    int [] try3=  a.merging(try1, try2);
 //        System.out.println("Merging the first array and the scond array : ");
 //      a.traversing(try3);
-        System.out.println("The index of value 7 in array try3 is [By LinearSearch]: "+Array.LinearSearchStatic(try3, 5));
-        System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 5));
-        System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 100));
-      
+//        System.out.println("The index of value 7 in array try3 is [By LinearSearch]: "+Array.LinearSearchStatic(try3, 5));
+//        System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 5));
+//        System.out.println("The index of value 7 in array try3 is [By BinarySearch]: "+Array.binarysearchStatic(try3, 100));
+//        Array.compareTo(try1, try2);
+//        Array.compareToInt(try3, try4);
+//        a.traversing(try3);
+//        Array.sort(try3);
+//        a.traversing(try3);
+    //        Array.sort(try4);
+//        Array.compareTo_Stored(try3, try4);
+//    Array.traversingSting(names);
+
+
+
+        String[] names1 = {"a", "f", "d", "c", "g", "e"};
+        Array.sortSting(names1);//[ a  c  d  e  f  g ]
+        String[] names2 = {"h", "c", "i", "b", "h", "g"};
+        Array.sortSting(names2);//[ b  c  g  h  h  i 
+        Array.StorTowlistString(names1, names2);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

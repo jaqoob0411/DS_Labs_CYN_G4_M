@@ -24,6 +24,15 @@ public class Array {
         System.out.println("]");
     }
 
+    public static void traversingSting(String[] a) {
+        System.out.print("[");
+        for (int i = 0; i < a.length; i++) {
+//            System.out.print("a[" + i + "]= " + a[i] + " ");
+            System.out.print(" " + a[i] + " ");
+        }
+        System.out.println("]");
+    }
+
     public void printl(int[] num) {
         for (int i = num.length - 1; i >= 0; i--) {
             System.out.println("index [ " + i + "] elamin = " + num[i]);
@@ -151,7 +160,21 @@ public class Array {
         }
     }
 
-    public int[] merging(int[] a1, int[] a2) {
+    public static void sortSting(String[] g) {
+        int n = g.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (g[j].compareTo(g[j + 1]) > 0) {//if the frist is gerter than the another the method will return number is bager than 0 eles the method retrun number id smaller than 0
+                    String temp = g[j];
+                    g[j] = g[j + 1];
+                    g[j + 1] = temp;
+                }
+            }
+
+        }
+    }
+
+    public static int[] merging(int[] a1, int[] a2) {
         int[] temp_array = new int[a1.length + a2.length];
         int i = 0;/*X*/
         //int index =0;
@@ -165,6 +188,24 @@ public class Array {
             // index++;
         }
         sort(temp_array);
+        return temp_array;
+
+    }
+
+    public static String[] mergingString(String[] a1, String[] a2) {
+        String[] temp_array = new String[a1.length + a2.length];
+        int i = 0;/*X*/
+        //int index =0;
+        for (/*int i = 0*/; i < a1.length; i++) {
+            temp_array[i/*index*/] = a1[i];
+            //  index++;
+        }
+
+        for (/*int i = 0*/; i < temp_array.length/*a2.length*/; i++) {
+            temp_array[i/*index*/] = a2[i - a1.length]/*a2[i]*/;
+            // index++;
+        }
+        sortSting(temp_array);
         return temp_array;
 
     }
@@ -201,10 +242,28 @@ public class Array {
             } else if (g[mid] < value) {
                 low = mid + 1;
             } else {
-                high = mid -1;
+                high = mid - 1;
             }
         }
         return -1;
+
+    }
+
+    public static boolean binarysearchBoolean(int[] g, int value) {
+        int low = 0;
+        int high = g.length - 1;
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            if (g[mid] == value) {
+                return true;
+
+            } else if (g[mid] < value) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return false;
 
     }
 
@@ -224,4 +283,62 @@ public class Array {
         return -1;
     }
 
+    public static void compareTo(Integer[] a, Integer[] b) {
+        for (Integer i : a) {
+            for (int j = 0; j <= b.length - 1; j++) {
+//                System.out.println(j);
+//                System.out.println("b[j] = "+b[j]);
+                if (i.compareTo(b[j]) == 0) {
+                    System.out.println("the macht nmber is = " + b[j]);
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public static void compareToInt(int[] a, int[] b) {
+        for (int i : a) {
+            for (int j = 0; j <= b.length - 1; j++) {
+                if (b[j] == i) {
+                    System.out.println("the macht nmber is = " + b[j]);
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public static void compareTo_Stored(int[] a, int[] b) {
+        for (int i = 0; i < a.length; i++) {
+            if (binarysearchBoolean(b, a[i])) {
+                System.out.println("the macht nmber is = " + a[i]);
+            }
+        }
+    }
+
+    
+    public static void StorTowlistString(String[] a, String[] b) {
+        int j = 0;
+        int i = 0;
+        while(i<a.length && j<b.length){
+        int com = a[i].compareTo(b[j]);
+        if(com == 0){
+            System.out.println(a[i]);
+            j++;
+            i++;
+        }else if ( com < 0){
+        i++;
+        }else{
+        j++;
+        }
+        }
+
+    }
 }
+
+
+
+
+
+
