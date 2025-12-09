@@ -29,6 +29,7 @@ public class Single_Linde_List<E extends Comparable<E>> {
             return null;
         }
         return head.getData();
+        
     }
 
     public void addlast(E data) {
