@@ -18,7 +18,9 @@ public class Main {
         lsit2.addlast(3);
         lsit2.addlast(4);
         lsit2.addlast(5);
+        System.out.println("Display without any Change { ");
         lsit2.dispaly();
+        System.out.println("}");
 //        System.out.println("the size of linked lsit is = "+lsit2.size());
 //        System.out.println("Enter numbet for add to linked list : ");
 //        int i = in.nextInt();
@@ -35,8 +37,20 @@ public class Main {
 //        System.out.println("after add at last [addatlastwithoutSize]: ");
 //        lsit2.addatlastwithoutSize(2);
 //        lsit2.dispaly();
-        System.out.println("After add elemant by order : ");
-        lsit2.addelmantbyordar(2);
+//        System.out.println("After add elemant by order : ");
+//        lsit2.addelmantbyordar(2);
+//        lsit2.dispaly();
+//        System.out.println("remove the last lemant : ");
+//        lsit2.removelast();
+//        lsit2.dispaly();f
+//        System.out.println("delet elmant that was alone in the linked list : ");
+//        lsit2.deletonlynode();
+//        System.out.println("Delatw the first node ");
+//        lsit2.deletTheFristnode();
+//        System.out.println("Delatw the last node ");
+//        lsit2.deletTheLastNodeWithoutTail();
+//        System.out.println("Delatw spicifc value :  ");
+//        lsit2.deletWithValueFromUser(5);
         lsit2.dispaly();
     }
 

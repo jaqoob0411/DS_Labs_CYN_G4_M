@@ -29,7 +29,7 @@ public class Single_Linde_List<E extends Comparable<E>> {
             return null;
         }
         return head.getData();
-        
+
     }
 
     public void addlast(E data) {
@@ -75,7 +75,7 @@ public class Single_Linde_List<E extends Comparable<E>> {
 //           size++;
         } else if (size() < postion) {
             System.out.println("the addtion postion is out the linked list !!!");
-        } else if (postion == size()) {
+        } else if (postion == size() + 1) {
             addlast(data);
 //           tail.setNext(nowNode);
 //           tail = nowNode;
@@ -132,7 +132,7 @@ public class Single_Linde_List<E extends Comparable<E>> {
     }
 
     public void addelmantbyordar(E data) {
-       
+
         if (isEmpty()) {
             // Node newnode = new Node(data, head)
             //size++;
@@ -144,17 +144,110 @@ public class Single_Linde_List<E extends Comparable<E>> {
                 if (temp.getNext().getData().compareTo(data) > 0) {
                     break;
                 }
-                temp= temp.getNext();
-                
+                temp = temp.getNext();
+
             }
-      
+
 //            Node newnode = new Node(data, temp.getNext());
 //            temp.setNext(newnode); 
-                Node newnode ;
-                temp.Next = new Node(data, temp.Next);
+            Node newnode;
+            temp.Next = new Node(data, temp.Next);
 
         }
 
+    }
+
+    public void addlist(E data) {
+
+        Node newnode = new Node(data, null);
+        if (isEmpty()) {
+            head = newnode;
+        } else {
+            tail.setNext(newnode);
+        }
+        tail = newnode;
+        size++;
+
+    }
+
+    public E removelast() {
+
+        if (isEmpty()) {
+            return null;
+        }
+        E delet = tail.getData();
+        if (head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            Node temp = head;
+            while (temp.getNext() != tail) {
+                temp = temp.getNext();
+            }
+            temp.setNext(null);
+            tail = temp;
+
+        }
+        size--;
+        return delet;
+    }
+    //---------------------------------------------------------------------------------------------------//
+    // deletion
+
+    public void deletonlynode() {
+        if (!isEmpty()) {
+            head = head.getNext();
+        } else {
+            System.out.println("The linded lsit is Empty sir ...!");
+        }
+    }
+
+    public void deletTheFristnode() {
+        if (!isEmpty()) {
+            head = head.getNext();
+        }
+    }
+
+    public void deletTheLastNodeWithoutTail() {
+        Node<E> temp = head;
+        if (!isEmpty()) {
+            while (temp.getNext() != null) {
+                if (temp.getNext().getNext() == null) {
+                    temp.setNext(temp.getNext().getNext());
+                    break;
+                }
+                temp = temp.getNext();
+            }
+        } else {
+            System.out.println("the linked list is empt ????");
+        }
+
+    }
+
+    public void deletWithValueFromUser(E value) {
+        Node temp = head;
+        boolean falgNotExst = true;
+        if (!isEmpty()) {
+            if (temp.getData() == value) {
+                deletFrist();
+            } else {
+                while (temp.getNext() != null) {
+                    if (temp.getNext().getData() == value) {
+                        temp.setNext(temp.getNext().getNext());
+                        falgNotExst = false;
+                        break;
+
+                    }
+                    temp = temp.getNext();
+                }
+                if (falgNotExst) {
+                    System.out.println("this value " + value + " is not exi");
+                    System.exit(0);
+                }
+            }
+        }
+        System.out.println("the lenked list is empty ");
+        System.exit(0);
     }
 
     class Node<E> {
