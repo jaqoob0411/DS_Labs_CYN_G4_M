@@ -1,4 +1,4 @@
-package circularLinkedList;
+package circular_Single_Linked_List;
 
 public class CircluarLinkedList<E> {
 
