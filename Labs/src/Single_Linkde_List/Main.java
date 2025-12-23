@@ -1,4 +1,4 @@
-package Single_Linde_List;
+package Single_Linkde_List;
 
 import java.util.Scanner;
 

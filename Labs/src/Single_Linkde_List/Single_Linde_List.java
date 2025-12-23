@@ -1,4 +1,4 @@
-package Single_Linde_List;
+package Single_Linkde_List;
 
 public class Single_Linde_List<E extends Comparable<E>> {
 
